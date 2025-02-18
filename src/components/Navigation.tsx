@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -42,7 +42,7 @@ export const Navigation = () => {
           <div className="flex justify-between items-center h-20">
             <Link to="/" className="flex items-center space-x-2 transition-transform hover:scale-105">
               <span className={`text-2xl font-bold transition-colors duration-300 ${shouldBeTransparent ? "text-white" : "text-blue-900"}`}>
-                BlynQ
+                BlynQ.
               </span>
             </Link>
             <div className="hidden md:flex items-center space-x-1">

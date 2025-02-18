@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Mail, Phone } from "lucide-react";
+import { Facebook, Twitter, Instagram, Mail, Phone, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Footer = () => {
@@ -22,7 +22,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 gradient-text">BlynQ</h3>
+            <h3 className="text-2xl font-bold mb-4 gradient-text">BlynQ.</h3>
             <p className="text-gray-400 hover:text-white transition-colors duration-300">
               Simplifying vehicle management for everyone in Sri Lanka.
             </p>
@@ -79,32 +79,40 @@ export const Footer = () => {
               </motion.a>
             </motion.div>
           </div>
-          <div>
+            <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4 justify-center">
               <motion.a
-                href="#"
-                variants={linkVariants}
-                whileHover="hover"
-                className="text-gray-400 hover:text-white"
+              href="#"
+              variants={linkVariants}
+              whileHover="hover"
+              className="text-gray-400 hover:text-white"
               >
-                <Facebook size={24} />
+              <Facebook size={24} />
               </motion.a>
               <motion.a
-                href="#"
-                variants={linkVariants}
-                whileHover="hover"
-                className="text-gray-400 hover:text-white"
+              href="#"
+              variants={linkVariants}
+              whileHover="hover"
+              className="text-gray-400 hover:text-white"
               >
-                <Twitter size={24} />
+              <Twitter size={24} />
               </motion.a>
               <motion.a
-                href="#"
-                variants={linkVariants}
-                whileHover="hover"
-                className="text-gray-400 hover:text-white"
+              href="#"
+              variants={linkVariants}
+              whileHover="hover"
+              className="text-gray-400 hover:text-white"
               >
-                <Instagram size={24} />
+              <Instagram size={24} />
+              </motion.a>
+              <motion.a
+              href="#"
+              variants={linkVariants}
+              whileHover="hover"
+              className="text-gray-400 hover:text-white"
+              >
+              <Linkedin size={24} />
               </motion.a>
             </div>
           </div>

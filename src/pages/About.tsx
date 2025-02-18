@@ -13,9 +13,9 @@ export const About = () => {
 
   const team = [
     {
-      name: "John Smith",
+      name: "Sihath Senarath Yapa",
       role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3",
+      image: "/sihath.jpg", 
       bio: "With over 15 years of experience in automotive industry, John leads our vision for the future of vehicle management.",
       social: {
         linkedin: "https://linkedin.com",
@@ -24,8 +24,8 @@ export const About = () => {
       },
     },
     {
-      name: "Sarah Williams",
-      role: "Chief Technology Officer",
+      name: "Amina Haja Meyan",
+      role: "Head of Operations",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3",
       bio: "Sarah brings 12 years of tech leadership experience, driving innovation in our platform development.",
       social: {
@@ -35,8 +35,8 @@ export const About = () => {
       },
     },
     {
-      name: "David Chen",
-      role: "Head of Operations",
+      name: "Gaindu Amarasingha",
+      role: "Chief Technology Officer",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3",
       bio: "David oversees our day-to-day operations, ensuring seamless service delivery to all our clients.",
       social: {
@@ -46,7 +46,7 @@ export const About = () => {
       },
     },
     {
-      name: "Maria Rodriguez",
+      name: "Pesadi Wikramathilaka",
       role: "Head of Customer Success",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3",
       bio: "Maria leads our customer success team, focusing on delivering exceptional service experiences.",
@@ -57,7 +57,7 @@ export const About = () => {
       },
     },
     {
-      name: "James Wilson",
+      name: "Sithum Duleka Kalhara",
       role: "Head of Product",
       image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3",
       bio: "James drives our product strategy, bringing innovative solutions to vehicle management.",

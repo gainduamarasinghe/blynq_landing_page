@@ -42,6 +42,7 @@ function AppContent() {
 }
 export function App() {
   return <Router>
+      <Navigation />
       <AppContent />
     </Router>;
 }
