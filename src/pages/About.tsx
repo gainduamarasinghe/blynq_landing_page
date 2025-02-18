@@ -149,8 +149,13 @@ export const About = () => {
       </motion.section>
 
       {/* Core Values Section */}
+      
       <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-5xl font-extrabold text-blue-900 mb-4 text-center">
+        Our Core Values Driving Us
+        </h2>
+          <div className="relative">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-900 rounded-t-full opacity-10" />
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -201,6 +206,7 @@ export const About = () => {
                 </motion.div>
               ))}
             </motion.div>
+          </div>
         </div>
       </section>
 
@@ -221,7 +227,7 @@ export const About = () => {
         </p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {team.map((member, index) => (
+        {team.slice(0, 3).map((member, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -229,9 +235,44 @@ export const About = () => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
             whileHover={{ scale: 1.05 }}
-            className={`relative bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-shadow duration-500 ${
-          index >= team.length - 2 ? "lg:col-span-3 lg:mx-auto lg:max-w-lg" : ""
-            }`}
+            className="relative bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-shadow duration-500"
+          >
+            <div className="overflow-hidden">
+          <motion.img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-80 object-cover transform hover:scale-110 transition-transform duration-700"
+          />
+            </div>
+            <div className="p-6 text-center">
+          <h3 className="text-2xl font-bold text-blue-900 mb-2">{member.name}</h3>
+          <p className="text-blue-500 font-medium mb-4">{member.role}</p>
+          <p className="text-gray-600 mb-6">{member.bio}</p>
+          <div className="flex justify-center space-x-4">
+            <a href={member.social.linkedin} className="text-blue-600 hover:text-blue-400 transition-colors">
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a href={member.social.twitter} className="text-blue-600 hover:text-blue-400 transition-colors">
+              <Twitter className="w-6 h-6" />
+            </a>
+            <a href={`mailto:${member.social.email}`} className="text-blue-600 hover:text-blue-400 transition-colors">
+              <Mail className="w-6 h-6" />
+            </a>
+          </div>
+            </div>
+          </motion.div>
+        ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto mt-10">
+        {team.slice(3).map((member, index) => (
+          <motion.div
+            key={index + 3}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: (index + 3) * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            className="relative bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-shadow duration-500"
           >
             <div className="overflow-hidden">
           <motion.img
@@ -272,7 +313,7 @@ export const About = () => {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Journey</h2>
+            <h2 className="text-5xl font-extrabold text-blue-900 mb-4 text-center">Our Journey</h2>
             <p className="text-xl text-gray-600">The milestones that shaped BlynQ</p>
           </motion.div>
           <div className="space-y-24">

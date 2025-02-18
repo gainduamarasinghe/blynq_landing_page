@@ -41,7 +41,7 @@ export const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link to="/" className="flex items-center space-x-2 transition-transform hover:scale-105">
-              <span className={`text-2xl font-bold transition-colors duration-300 ${shouldBeTransparent ? "text-white" : "text-gray-900"}`}>
+              <span className={`text-2xl font-bold transition-colors duration-300 ${shouldBeTransparent ? "text-white" : "text-blue-900"}`}>
                 BlynQ
               </span>
             </Link>

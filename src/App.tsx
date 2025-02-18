@@ -8,6 +8,7 @@ import { About } from "./pages/About";
 import { Services } from "./pages/Services";
 import { Contact } from "./pages/Contact";
 import { Footer } from "./components/Footer";
+import { FAQSection } from "./components/FAQSection";
 function AppContent() {
   const location = useLocation();
   useEffect(() => {
@@ -25,9 +26,14 @@ function AppContent() {
               </PageTransition>} />
           <Route path="/services" element={<PageTransition>
                 <Services />
+                
               </PageTransition>} />
           <Route path="/contact" element={<PageTransition>
                 <Contact />
+              </PageTransition>} />
+
+          <Route path="/FAQ" element={<PageTransition>
+                <FAQSection/>
               </PageTransition>} />
         </Routes>
       </AnimatePresence>
