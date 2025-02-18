@@ -1,5 +1,5 @@
 import { motion, useScroll } from "framer-motion";
-import { Car, Clock, FileText, Calendar,  Users,  ArrowRight, CheckCircle, Shield, Zap, Database } from "lucide-react";
+import { Car, Clock, FileText, Calendar, Users, Star, ArrowRight, CheckCircle, Shield, Zap, Database } from "lucide-react";
 
 const mobileFeatures = [
   {
@@ -16,6 +16,30 @@ const mobileFeatures = [
     icon: <FileText />,
     title: "Document Management",
     description: "Secure document storage",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Vehicle Owner",
+    content:
+      "BlynQ has completely transformed how I manage my vehicle maintenance. The real-time updates are invaluable!",
+    rating: 5,
+  },
+  {
+    name: "Michael Chen",
+    role: "Fleet Manager",
+    content:
+      "Managing our company's fleet has never been easier. The document management system is a game-changer.",
+    rating: 5,
+  },
+  {
+    name: "Priya Kumar",
+    role: "Service Center Owner",
+    content:
+      "BlynQ helps us provide better service to our customers. The appointment system is seamless.",
+    rating: 5,
   },
 ];
 
@@ -74,9 +98,8 @@ const webFeatures = [
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#1A237E] text-center mb-12">
-          Why Choose BlynQ
-        </h2>
+      
+      <h2 className="text-5xl text-center mb-16 font-extrabold text-blue-900 mb-4">Why Choose BlynQ</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <motion.div
@@ -102,8 +125,8 @@ const webFeatures = [
   );
 };
 
+
 export const Home = () => {
-  useScroll();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -337,7 +360,48 @@ export const Home = () => {
     </section>
 
     <WhyChooseUs />
+    <section className="py-20 bg-gradient-to-b from-white to-blue-50">
+  <div className="max-w-7xl mx-auto px-4">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-5xl font-extrabold text-blue-900 mb-4">What Our Users Say</h2>
+      <p className="text-lg text-gray-700">Trusted by vehicle owners and service centers across Sri Lanka</p>
+    </motion.div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {testimonials.map((testimonial, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1 }}
+          whileHover={{ scale: 1.05 }}
+          className="relative bg-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500"
+        >
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center shadow-lg">
+              <Star className="w-6 h-6 text-yellow-400 fill-current" />
+            </div>
+            <div className="ml-4">
+              <p className="text-xl font-semibold text-blue-900">{testimonial.name}</p>
+              <p className="text-sm text-gray-500">{testimonial.role}</p>
+            </div>
+          </div>
+          <p className="text-gray-700 italic mb-6">“{testimonial.content}”</p>
+          <div className="flex items-center">
+            {[...Array(testimonial.rating)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+            ))}
+          </div>
+        </motion.div>
+      ))}
     </div>
+  </div>
+</section>    </div>
   );
 };
 
