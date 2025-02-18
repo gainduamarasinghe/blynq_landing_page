@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import{ useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Target, Award, ArrowRight, Linkedin, Twitter, Mail } from "lucide-react";
 export const About = () => {
@@ -230,7 +230,7 @@ export const About = () => {
             transition={{ delay: index * 0.1 }}
             whileHover={{ scale: 1.05 }}
             className={`relative bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-shadow duration-500 ${
-          index >= team.length - 2 ? "lg:col-span-3/2 lg:translate-x-1/2" : ""
+          index >= team.length - 2 ? "lg:col-span-3 lg:mx-auto lg:max-w-lg" : ""
             }`}
           >
             <div className="overflow-hidden">
